@@ -27,10 +27,32 @@ Usage:
 
 
 ## getImte(key)
+Returns the value associated to the specified `key` value in the parameter. If there is no value associated to this key, the method will return null.
+
+Usage:
+
+    var val1 = myStorage.getItem('storageValue1'); //val1 will have the value "This is the first value of the storageTester."
+    var val2 = myStorage.getItem(123); //val2 will be null, because there has been no value saved for key '123'.
 
 ## getAllKeys()
+Returns an array with all the keys associated to the current application. If there were no key/values saved for this application an empty array will be returned.
+
+Usage:
+
+    var keys = myStorage.getAllKeys(); // keys = ['storageValue1', 'storageValue2']
 
 ## removeItem(key)
+Removes the value associated to a key from the localStorage.
+
+Usage:
+
+    myStorage.removeItem('storageValue1');
+
 
 ## removeAll()
+Removes every value from the localStorage associated to the current application.
+
+Usage:
+
+    myStorage.removeAll();
 
